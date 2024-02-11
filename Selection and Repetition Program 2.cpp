@@ -10,24 +10,32 @@ int main()
 	cout << "Please enter two numbers separated by an operator(+, -, *, /):" << endl;
 	cin >> num1 >> operand >> num2;
 
-	if (operand == '+')
+	switch (operand)
+	{
+	case '+':
 		cout << num1 << " + " << num2 << " = " << num1 + num2 << endl;
+	break;
 
-	if (operand == '-')
+	case '-':
 		cout << num1 << " - " << num2 << " = " << num1 - num2 << endl;
+	break;
 
-	if (operand == '*')
+	case '*':
 		cout << num1 << " * " << num2 << " = " << num1 * num2 << endl;
+	break;
 
-	if (operand == '/')
+	case '/':
 		cout << num1 << " / " << num2 << " = " << num1 / num2 << endl;
+	break;
 
-	if (operand == '/' && num2 == 0)
+	case operand == '/' && num2 == 0:
 		cout << "Cannot divide by zero." << endl;
+	break;
 
-	if (operand != '+' && operand != '-' && operand != '*' && operand != '/')
+	case (operand != '+' && operand != '-' && operand != '*' && operand != '/')
 		cout << "Error, invalid operator symbol." << endl;
-
+	break;
+	}
 
 	return 0;
 }
