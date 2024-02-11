@@ -26,15 +26,12 @@ int main()
 
 	case '/':
 		cout << num1 << " / " << num2 << " = " << num1 / num2 << endl;
-	break;
-
-	case operand == '/' && num2 == 0:
+		if (num2 == 0)
 		cout << "Cannot divide by zero." << endl;
 	break;
 
-	case (operand != '+' && operand != '-' && operand != '*' && operand != '/')
+	default:
 		cout << "Error, invalid operator symbol." << endl;
-	break;
 	}
 
 	return 0;
